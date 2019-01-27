@@ -13,6 +13,7 @@ npm
 
 * Clone or download the repo.
 * Open a terminal in project directory
+* Instal the app using `npm install`.
 * Run the app using `npm start`.
 * App can be seen at: `localhost:3000`.
 
