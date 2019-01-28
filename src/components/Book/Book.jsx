@@ -1,23 +1,18 @@
 import React, { Component } from 'react'
 
-
 export default class Book extends Component {
 	handleBookUpdate(evt){
 		const shelf = evt.target.value
-		this.props.handler(this.props, shelf)
-		// ^ fine sending this.props as only book.id is used for update
-	}
-
+		this.props.handler(this.props, shelf)}
 	render(){
 		const shelf = this.props.shelf ? this.props.shelf : 'none'
-
 		return (
 			<li>
 				<div className="book">
 					<div className="book-top">
 						<div className="book-cover" style={{
-							width: 128,
-							height: 193,
+							width: 127,
+							height: 192,
 							backgroundImage: `url("${this.props.imageLinks ? this.props.imageLinks.thumbnail : ''}")`
 						}}></div>
 						<div className="book-shelf-changer">
