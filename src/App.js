@@ -1,13 +1,8 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
-// import * as BooksAPI from './BooksAPI'
+import {BrowserRouter as Router,Route} from 'react-router-dom'
 import './App.css'
 import Home from './screens/Home/Home'
 import Search from './screens/Search/Search'
-
 
 class BooksApp extends React.Component {
   render() {
@@ -21,5 +16,4 @@ class BooksApp extends React.Component {
     )
   }
 }
-
 export default BooksApp
