@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import Shelf from '../../components/Shelf/Shelf'
 import {getAll, update} from '../../BooksAPI'
 
-
 export default class Home extends Component {
 	constructor(props){
 		super(props)
@@ -11,27 +10,21 @@ export default class Home extends Component {
 			books: []
 		}
 	}
-
 	componentDidMount(){
 		this.fetchBooks()
 	}
-
 	fetchBooks(){
 		getAll().then((data) => {
 			this.setState({books: data})
 		})
 	}
-
 	filterBooksByShelf(shelf){
 		return this.state.books.filter((book) => book.shelf === shelf)
 	}
-
 	updateHandler(book, shelf){
 		this.updateBook(book, shelf)
 		update(book, shelf).then(() => console.log('Book update done'))
-		// ^ takes a lot of time so better for checking
 	}
-
 	updateBook(book, shelf){
 		let books = this.state.books;
 		books.forEach((oldBook, ind) => {
@@ -41,7 +34,6 @@ export default class Home extends Component {
 		})
 		this.setState({books: books})
 	}
-
 	render() {
 		return (
 			<div className="list-books">
