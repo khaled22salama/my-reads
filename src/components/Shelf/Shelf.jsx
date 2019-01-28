@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-
 import Book from '../Book/Book'
-
 
 export default class Shelf extends Component {
 	render() {
